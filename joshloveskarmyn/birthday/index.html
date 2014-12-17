@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Karmyn</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/cover.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+
+
+          <div class="inner cover">
+            <h1 style= "font-size: 100px; font-weight: bold"class="cover-heading">SUPER</h1>
+            <h1 style= "font-size: 50px; font-weight: bold"class="cover-heading">SECRET</h1>
+            <h1 style= "font-size: 25px; font-weight: bold"class="cover-heading">PASSWORD</h1>
+
+            <p id = "inputs"class="lead">
+              <input style="width: 100px; margin-left: 43%; "type="email" id = "password"style="margin-top: 20px" class="form-control" placeholder="Password" required="" autofocus="">
+            </p>
+
+            <button type="button" id = "gobutton"onClick = "checkPass()"class="btn btn-xs btn-info">GO</button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+
+    // See? This is why you're so great. It's hard to find a partner in crime who knows how to use
+    // Chrome dev tools. I'd bet you can figure this out:
+
+    function checkPass(){
+      var a = document.getElementById('password').value
+      if (a == "karmyniscute"){
+        var newItem = document.createElement("a");
+        newItem.href = "firstchallenge.html";
+        newItem.innerHTML = "<button type='button' class='btn btn-xs btn-info'>You've completed the first challenge! Click here to go to the next one.</button>"
+        var inputs = document.getElementById("inputs");
+
+        inputs.appendChild(newItem);
+      }
+    }
+    </script>
+  </body>
+</html>
